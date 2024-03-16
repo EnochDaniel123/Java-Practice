@@ -1,0 +1,119 @@
+Inheritance in OOP allows classes to inherit attributes and methods from other classes, promoting code reuse and hierarchical structure. Simple inheritance involves one base class and one derived 
+class, enabling the derived class to inherit from the base class and extend its functionality. This concept facilitates modular and maintainable code by encapsulating common
+features in the base class and allowing customization in the derived class.
+// Code for simple Inheritance 
+
+class Bank{
+    public String name;
+    public int amount ;
+    
+public void setname(String name)
+{
+this.name = name;
+
+}
+public void setamount(int amount)
+{
+this.amount= amount;
+}
+public void display()
+{System.out.println("name; "+ name);
+System.out.println("amount; "+ amount);
+}}
+class Loan extends Bank{
+    int intrest_rate;
+  public void setinterest(int intrest_rate)
+    {this.intrest_rate = intrest_rate ;}
+    public void Simple_Intrest()
+    {int si = (amount*intrest_rate)/100 ;
+        System.out.println("Simple interest; "+ si);
+    }
+    public static void main(String[] args)
+    {Loan l = new Loan();
+    l.setname("Daniel");
+    l.setamount(5677);
+    l.setinterest(20);
+    l.display();
+    
+    l.Simple_Intrest();
+    }}
+          // output 
+                          name; Daniel
+                          amount; 5677
+                          Simple interest; 1135
+
+
+
+
+// by taking input from user  single inheritance
+
+
+import java.util.Scanner;
+class Bank{
+    public String name;
+    public int amount ;
+    
+public void setname(String name)
+{
+this.name = name;
+
+}
+public void setamount(int amount)
+{
+this.amount= amount;
+}
+public void display()
+{System.out.println("name; "+ name);
+System.out.println("amount; "+ amount);
+}}
+class Loan extends Bank{
+    int intrest_rate;
+  public void setinterest(int intrest_rate)
+    {this.intrest_rate = intrest_rate ;}
+    public void Simple_Intrest()
+    {int si = (amount*intrest_rate*2)/100 ;
+        System.out.println("Simple interest; "+ si);
+    }
+    public static void main(String[] args)
+    {Loan l = new Loan();
+    Scanner s = new Scanner(System.in);
+    System.out.println("enter the name; ");
+    String name = s.nextLine();
+    
+    l.setname(name);
+    System.out.println("enter the amount; ");
+    int amount = s.nextInt();
+    
+    l.setamount(amount);
+    System.out.println("enter the inters_rate; ");
+    int intrest_rate = s.nextInt();
+    
+    l.setinterest(intrest_rate);
+    l.display();
+    
+    l.Simple_Intrest();
+    }}
+    
+    
+    // output 
+
+                    enter the name; 
+                    raj
+                    enter the amount; 
+                    4000
+                    enter the interset; 
+                    5
+                    name; raj
+                    amount; 4000
+                    Simple interest; 400
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
