@@ -1,0 +1,113 @@
+// Multilevel inheritance in OOP involves classes inheriting properties and behaviors from one another, forming a hierarchy
+   where each subclass extends its immediate superclass and can further serve as a superclass for subsequent subclasses.
+   This pattern promotes code reusability and specialization, facilitating the organization of classes in a structured and efficient manner.
+// simple inheritance code 
+
+        class A
+        {int a , b , c;
+        void add()
+        { a = 5;b = 6;
+            int  c = a+b ;
+        System.out.println("sum of a + b is :"+ c );}
+        
+        void sub()
+        { a = 8; b = 9;
+            c = a-b ;
+        System.out.println("subt of a - b is :"+ c );}
+        }
+        class B extends A
+        {
+        void mul()
+        { a = 2; b = 3;
+            c = a*b ;
+        System.out.println("mul of a * b is :"+ c );}
+        
+        void div()
+        { a = 3; b = 6;
+            c = a/b ;
+        System.out.println("div of a / b is :"+ c );}}
+        class C extends B{
+        
+        void rem()
+        {  a = 10; b = 16;
+            int c = a%b ;
+        System.out.println("rem of a % b is "+ c );}
+        public static void main(String[] args)
+        {C o = new C();
+        o.add(); o.sub(); o.mul(); o.div();  o.rem();}}
+
+// Output 
+
+          sum of a + b is :11
+          subt of a - b is :-1
+          mul of a * b is :6
+          div of a / b is :0
+          rem of a % b is 10
+
+
+
+
+
+
+// By taking input from user code 
+
+import java.util.Scanner;
+
+class A {
+    int a, b, c;
+
+    void add(int a, int b) {
+        c = a + b;
+        System.out.println("Sum of " + a + " + " + b + " is: " + c);
+    }
+
+    void sub(int a, int b) {
+        c = a - b;
+        System.out.println("Subtraction of " + a + " - " + b + " is: " + c);
+    }
+}
+
+class B extends A {
+    void mul(int a, int b) {
+        c = a * b;
+        System.out.println("Multiplication of " + a + " * " + b + " is: " + c);
+    }
+
+    void div(int a, int b) {
+        c = a / b;
+        System.out.println("Division of " + a + " / " + b + " is: " + c);
+    }
+}
+
+class C extends B {
+    void rem(int a, int b) {
+        int c = a % b;
+        System.out.println("Remainder of " + a + " % " + b + " is: " + c);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        C o = new C();
+
+        System.out.print("Enter value of a: ");
+        int a = scanner.nextInt();
+
+        System.out.print("Enter value of b: ");
+        int b = scanner.nextInt();
+
+        o.add(a, b);
+        o.sub(a, b);
+        o.mul(a, b);
+        o.div(a, b);
+        o.rem(a, b);
+
+        scanner.close();
+    }
+}
+        
+
+  
+  
+  
+  
+  
