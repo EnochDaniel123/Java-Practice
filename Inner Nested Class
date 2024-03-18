@@ -1,0 +1,17 @@
+// code 
+
+class Outter {
+    int data = 30 ;
+    class Inner{
+        void msg()
+        {
+            System.out.println("dada is "+ data);
+        }
+    }
+    public static void main(String[] args)
+    {
+        Outter obj = new Outter();
+        Outter.Inner in = obj.new Inner();
+        in.msg();
+    }
+}
