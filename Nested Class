@@ -1,0 +1,38 @@
+// In Java, a nested class is a class defined within another class.
+        Nested classes can be classified into two types: 
+        static nested classes and inner classes.
+
+1.   Static Nested Class: This type of nested class is a static member of the outer class. 
+            It can access static members of the outer class directly and can be 
+           instantiated without an instance of the outer class. However,
+           it cannot access instance variables or methods of the outer class without an instance of the outer class.
+
+2. Inner Class: This type of nested class is a non-static member of the outer class.
+          It has access to all members (both static and instance) of the outer class. 
+          Inner classes are primarily used when you need to associate a class closely with its outer class 
+          and don't need access to the outer class's instance variables and methods.
+
+
+
+// Simple code :
+
+                                     class Outter1{
+                                    static int data  = 30 ;
+                                    void msg1(){
+                                        int data = 12;
+                                        System.out.println("data is "+ data);
+                                    }
+                                    static class B{
+                                        void msg()
+                                        {
+                                            System.out.println("data is "+ data);
+                                        }
+                                    }public static void main(String[] args)
+                                    { Outter1.B obj = new Outter1.B();
+                                    Outter1 a = new Outter1();
+                                    obj.msg();
+                                    a.msg1()}}
+
+// Output     
+                data is 30
+                data is 12
