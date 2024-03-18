@@ -1,0 +1,59 @@
+code for printing name and regeisteration using Nested  static class
+cod  ;
+ class Outter {
+    static int reg = 12208902;
+
+        static  void msg1()
+        { 
+            String name = "Daniel" ;
+            System.out.println("eneter name "+ name );
+        
+            
+        }
+        static class B{
+            void msg(){
+                 System.out.println("eneter regeister "+ reg );
+         }
+        }
+        public static void main(String[] args)
+        { Outter.B o = new Outter.B();
+         Outter p = new Outter();
+        p.msg1() ;
+        o.msg();}
+    }
+
+
+
+// code for Nested calss Inner class
+   code :
+
+
+    class Outter {
+     int reg = 12208902;
+
+         void msg1()
+        { 
+            String name = "Daniel" ;
+            System.out.println("eneter name "+ name );
+        
+            
+        }
+         class Inner{
+            void msg(){
+                 System.out.println("eneter regeister "+ reg );
+         }
+        }
+        public static void main(String[] args)
+        { 
+         Outter p = new Outter();
+          
+        Outter.Inner o = p.new Inner();
+        p.msg1() ;
+        o.msg();}
+    }
+    
+    // out put 
+
+    eneter name Daniel
+eneter regeister 12208902
+
