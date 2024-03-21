@@ -1,0 +1,54 @@
+//  Setting Time Zone
+// zones using the java.time
+
+        In Java, you can handle time zones using the java.time package, introduced in Java 8.
+        The ZoneId class represents a time zone, and you can use it to obtain a ZonedDateTime
+        object which represents a date and time with a time zone. Here's a basic example:
+        
+code :
+import java.time.*;
+public class GFF{
+    public static void main(String[] args)
+    {
+        ZoneId zoneid1= ZoneId.of("Asia/Kolkata");
+        ZoneId zoneid2 = ZoneId.of("Europe/London");
+        LocalTime time1 = LocalTime.now(zoneid1);
+         LocalTime time2 = LocalTime.now(zoneid2);
+         System.out.println(time1);
+         System.out.println(time2);
+              System.out.println(time1.isBefore(time2));
+        
+    }
+}
+
+
+// output 
+
+09:41:34.431819
+04:11:34.432118
+false
+
+
+
+
+
+
+/ / hot add Hours and minute seconds on current time
+
+code :
+
+import java.time.LocalTime;
+public class LocalTimeEx{
+    public static void main(String[] args)
+    { LocalTime time1 =LocalTime.of(10,43,12);
+    System.out.println(time1);
+    LocalTime time2 =time1.plusHours(4);
+      LocalTime time3 =time2.plusMinutes(18);
+      LocalTime time4 =time3.plusSeconds(18);
+      System.out.println(time4);
+    }
+    }
+
+// output
+10:43:12
+15:01:30
