@@ -52,3 +52,29 @@ main methid ended
 
 === Code Execution Successful ===
 
+
+// note if exption is there in try block then catch block will executed
+// if exption is not there in try block then try block will execute
+
+// code
+class Test{
+    public static void main(String[] args)
+    {System.out.println("main methid startded");
+    int a = 10 , b=2 , c;
+    try{
+    c = a/b ;
+    System.out.println(c);}
+    catch(ArithmeticException p){
+    System.out.println(p);}
+    System.out.println("main method ended");}
+}
+
+// output
+
+java -cp /tmp/D7P4UzfAC0/Test
+main methid startded
+5
+main methid ended
+
+=== Code Execution Successful ===
+
