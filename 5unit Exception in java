@@ -1,0 +1,54 @@
+// exception in java
+
+In Java, an exception is an event that disrupts the normal flow of the program's instructions during execution.
+When an exceptional circumstance arises within a method,
+the method creates an object and hands it off to the runtime system.
+
+code:
+
+class Test{
+    public static void main(String[] args)
+    {System.out.println("main methid startded");
+    int a = 10 , b=0 , c;
+    c = a/b ;
+    System.out.println(c);
+    System.out.println("main methid ended");}
+}
+
+//output
+
+main methid startde
+ERROR!
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at Test.main(Test.java:5)
+
+=== Code Exited With Errors ===
+
+
+
+// correct the code caused 
+
+why  exception occured in java programm
+
+code:
+class Test{
+    public static void main(String[] args)
+    {System.out.println("main methid startded");
+    int a = 10 , b=0 , c;
+    try{
+    c = a/b ;
+    System.out.println(c);}
+    catch(ArithmeticException p){
+    System.out.println(p);}
+    System.out.println("main methid ended");}
+}
+
+// output 
+
+java -cp /tmp/n1iUYwGg9v/Test
+main methid startded
+java.lang.ArithmeticException: / by zero
+main methid ended
+
+=== Code Execution Successful ===
+
