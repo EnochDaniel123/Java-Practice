@@ -1,0 +1,89 @@
+//code:
+
+class Ness{
+    public static void main(String[] args)
+    {
+    try{
+    try{
+        int a[] = {10,20,30,}; 
+        System.out.println(a[2]);
+    }
+    catch(ArrayIndexOutOfBoundsException a )
+    {System.out.println(a);
+    
+    }
+    System.out.println(10/0);}
+    catch(ArithmeticException e)
+    {System.out.println(e);
+    }
+    System.out.println("learn ");}
+    }
+    
+// output
+
+
+
+java -cp /tmp/kVBslPmQXt/Ness
+30
+java.lang.ArithmeticException: / by zero
+learn 
+
+=== Code Execution Successful ===
+
+
+
+// code
+class Ness {
+    public static void main(String[] args)
+    {
+        try{
+        System.out.println(10/0);
+        }
+        catch(Exception e)
+        {System.out.println(e);
+            String a =null ;
+        System.out.println(a);
+        }
+        System.out.println("main method ended");
+    }
+
+// output
+
+java -cp /tmp/e4UHlo7JSX/Ness
+java.lang.ArithmeticException: / by zero
+ERROR!
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.toUpperCase()" because "<local2>" is null
+	at Ness.main(Ness.java:10)
+
+=== Code Exited With Errors ===
+
+
+
+
+// Nested Catch block 
+code:
+
+class Ness {
+    public static void main(String[] args)
+    {
+        try{
+        System.out.println(10/0);
+        }
+        catch(Exception e)
+        { try {
+            String a = null ;
+            System.out.println(a.toLowerCase());
+        }
+        catch (NullPointerException n )
+        {    System.out.println("null pointer can not be converted");}}
+        System.out.println("main metho ended ");}}
+
+
+
+// output 
+
+java -cp /tmp/koBmhQkvds/Ness
+null pointer can not be converted
+main metho ended 
+
+=== Code Execution Successful ===
