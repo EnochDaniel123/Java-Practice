@@ -1,0 +1,55 @@
+//     Throw block in java exception
+        @.The throw statement is typically used inside methods to signal exceptional conditions. 
+       These exceptions can be caught and handled using try-catch blocks,
+       or they can be declared to be thrown by the method using the throws keyword in the method signature.
+
+
+
+
+
+
+
+        In Java, the throw statement is used to explicitly throw an exception. 
+        This allows you to create custom exceptions or to propagate
+        built-in exceptions manually when certain conditions are met in your code.
+
+
+ A . Throw with main method print output after one Second it is used only inside main method
+
+code:
+
+class Throw {
+    
+public static void main(String[] args) throws InterruptedException
+{
+    for(int i = 1; i<=10;i++){
+    System.out.println(i);
+    Thread.sleep(1000);}
+    }
+}
+
+// output 
+
+output will be printed after one Second 1 2 3 4 5 6 7 8 9 10
+
+B> code:
+class Throw {
+    
+public static void main(String[] args) 
+{
+    int a =2;
+    a = a-2;
+    if(a==0)
+   
+    throw new ArithmeticException("a is 0");
+    }
+}
+
+// output:
+
+java -cp /tmp/vSZvlnazgl/Throw
+ERROR!
+Exception in thread "main" java.lang.ArithmeticException: a is 0
+	at Throw.main(Throw.java:9)
+
+=== Code Exited With Errors ===
