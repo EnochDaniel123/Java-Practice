@@ -1,0 +1,61 @@
+// 
+
+
+
+code: to enterName  password and hide passord
+
+import java.io.*;
+class Ae{
+    public static void main(String[] args)
+{
+String str; char ch[];
+Console obj = System.console();
+
+System.out.println("Enter user name: ");
+str = obj.readLine();
+System.out.println("enter the password: ");
+ch = obj.readPassword();
+System.out.println("Username: "+str);
+System.out.println("password: "+ch);}}
+
+output//
+
+java -cp /tmp/K6fQJTG0kG/Ae
+Enter user name: 
+Enoch
+enter the password: 
+57689
+Username: Enoch
+password: [C@6956de9
+
+=== Code Execution Successful ===
+
+2: and to Display hidden password ;
+
+code;
+import java.io.*;
+class Ae{
+    public static void main(String[] args)
+{
+String str; char ch[];
+Console obj = System.console();
+
+System.out.println("Enter user name: ");
+str = obj.readLine();
+System.out.println("enter the password: ");
+ch = obj.readPassword();
+String a = String.valueOf(ch);
+System.out.println("Username: "+str);
+System.out.println("password: "+a);}}
+
+output ;
+
+java -cp /tmp/VxqzZONNAr/Ae
+Enter user name: 
+fgfh
+enter the password: 
+987870
+Username: fgfh
+password: 987870
+
+=== Code Execution Successful ===
