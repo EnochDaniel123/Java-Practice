@@ -1,0 +1,32 @@
+Collection:
+                  In Java, the java.util package provides a framework called the Collections Framework, 
+                  which consists of a set of interfaces and classes to represent and manipulate collections of objects.
+                  Collections in Java provide a way to group multiple elements into a single unit and perform various operations 
+                  like adding, removing, and querying elements efficiently.
+
+
+
+Code: ADD, REPLACE ,REMOVE ,CLEAR,set
+
+
+
+import java.util.*;
+class Coll{
+    public static void main(String[] args)
+    {
+        ArrayList<String>named = new ArrayList<String>();
+        named.add("Ankit");
+        named.add("daniel");
+        named.add("enoch");
+        System.out.println(named);
+        
+                named.remove(0);
+                        named.set(0,"EMANUEL");
+        named.add(0,"son");
+       
+        System.out.println(named);
+         
+        System.out.println(named.get(2));
+           named.clear();
+    }
+    }
