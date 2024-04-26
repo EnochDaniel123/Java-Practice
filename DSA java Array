@@ -1,0 +1,75 @@
+DSA java 2D Array :
+
+code to tak input :
+import java.util.Scanner;
+public class arr2{
+    public static void main(String[] args)
+    { Scanner s = new Scanner(System.in);
+    System.out.println("Enter the elements: ");
+    int r = s.nextInt();
+    int c = s.nextInt();
+        int[][] a = new int[r][c];
+    for(int i=0;i<r;i++)
+    { for(int j=0;j<c;j++)
+    {
+        a[i][j] = s.nextInt();}
+}
+for(int i=0;i<r;i++)
+{for(int j =0;j<c;j++)
+{System.out.print(a[i][j]+" ");}
+    System.out.println();
+}
+}}
+
+// output:
+java -cp /tmp/MI6tVtrhxs/arr2
+Enter the elements: 
+2
+3
+2 3 4
+3 4 5
+2 3 4 
+3 4 5 
+
+=== Code Execution Successful ===
+
+2. To find the elemnts index :
+
+import java.util.Scanner;
+public class arr2{
+    public static void main(String[] args)
+    { Scanner s = new Scanner(System.in);
+    System.out.println("Enter the elements: ");
+    int r = s.nextInt();
+    int c = s.nextInt();
+        int[][] a = new int[r][c];
+    for(int i=0;i<r;i++)
+    { for(int j=0;j<c;j++)
+    {
+        a[i][j] = s.nextInt();}
+        
+}
+int  x = s.nextInt();
+
+
+for(int i=0;i<r;i++)
+{for(int j =0;j<c;j++)
+{if(a[i][j] == x){
+    System.out.println("row "+i+" "+" column"+j );
+}}
+}}}
+//output:
+java -cp /tmp/sTZfqSmRuv/arr2
+Enter the elements: 
+2 3
+2 3 5
+3 4 5
+5
+row 0  column2
+row 1  column2
+
+=== Code Execution Successful ===
+
+
+
+
