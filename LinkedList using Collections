@@ -1,0 +1,56 @@
+// Adding and removing elemnts using linkedlist throw Collections 
+
+
+code:   
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<String> l = new LinkedList<String>();
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Enter the number of elements: ");
+        int num = s.nextInt();
+        s.nextLine(); // Consume the newline character
+
+        System.out.println("Enter " + num + " elements:");
+        for (int i = 0; i < num; i++) {
+            String input = s.nextLine();
+            l.add(input);
+        }
+
+        System.out.println("List: " + l);
+
+        System.out.println("Enter the element to remove: ");
+        String r = s.nextLine();
+        if (l.contains(r)) {
+            l.remove(r);
+            System.out.println("List after removing '" + r + "': " + l);
+        } else {
+            System.out.println("Element not found in the list.");
+        }
+        
+        // Closing the Scanner to prevent resource leak
+        s.close();
+    }
+}
+
+
+
+//output:
+Enter the number of elements: 
+3
+Enter 3 elements:
+e
+r
+t
+List: [e, r, t]
+Enter the element to remove: 
+r
+List after removing 'r': [e, t]
+
+=== Code Execution Successful ===
+
+
+
+
